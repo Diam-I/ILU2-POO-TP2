@@ -14,5 +14,10 @@ public class BoundaryAcheterProduit {
 
 	public void acheterProduit(String nomAcheteur) {
 		// TODO à completer
+		
+		System.out.println("Quel produit voulez-vous acheter ?");
+		String produit = scan.next();
+		controlAcheterProduit.acheterProduit(nomAcheteur,produit);
+		
 	}
 }
