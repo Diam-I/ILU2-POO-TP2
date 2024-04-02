@@ -15,9 +15,17 @@ public class BoundaryAcheterProduit {
 	public void acheterProduit(String nomAcheteur) {
 		// TODO à completer
 		
-		System.out.println("Quel produit voulez-vous acheter ?");
-		String produit = scan.next();
-		controlAcheterProduit.acheterProduit(nomAcheteur,produit);
+		boolean estHabitant = controlAcheterProduit.controlVerifierIdentite(nomAcheteur);
+		if (!estHabitant) {
+			System.out.println("Je suis désolée " + nomAcheteur + " mais il faut être un habitant de notre village pour commercer ici.");
+			
+		}		
+		else {
+			System.out.println("Quel produit voulez-vous acheter ?");
+			String produit = scan.next();
+			controlAcheterProduit.acheterProduit(nomAcheteur,produit);
+		}
+		
 		
 	}
 }
