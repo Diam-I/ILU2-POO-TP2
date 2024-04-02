@@ -10,4 +10,7 @@ public class ControlAfficherMarche {
 	}
 
 	//TODO a completer
+	public String[] donnerEtalMarche() {
+		return village.donnerEtatMarche();
+	}
 }
